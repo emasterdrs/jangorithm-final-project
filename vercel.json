@@ -3,14 +3,10 @@
   "builds": [
     {
       "src": "package.json",
-      "use": "@vercel/node",
+      "use": "@vercel/static-build",
       "config": {
-        "maxLambdaSize": "50mb"
+        "buildCommand": "npm run build"
       }
-    },
-    {
-      "src": "vite.config.ts",
-      "use": "@vercel/static-build"
     }
   ],
   "routes": [
