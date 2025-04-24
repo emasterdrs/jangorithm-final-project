@@ -1,14 +1,10 @@
 {
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/node",
-      "config": { "maxLambdaSize": "50mb" }
-    }
-  ],
   "build": {
     "env": {
       "NODE_ENV": "production"
+    },
+    "commands": {
+      "build": "npm run build"
     }
   }
 }
